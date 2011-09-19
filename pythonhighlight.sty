@@ -110,7 +110,7 @@ breakindent=.5\textwidth,frame=single,breaklines=true%
 %}
 }
 
-\newcommand{\inputpython}[3]{\lstinputlisting[firstline=#1,lastline=#2,firstnumber=#1,frame=single,breakindent=.5\textwidth,frame=single,breaklines=true,style=mypython]{#3}}
+\newcommand*{\inputpython}[3]{\lstinputlisting[firstline=#2,lastline=#3,firstnumber=#2,frame=single,breakindent=.5\textwidth,frame=single,breaklines=true,style=mypython]{#1}}
 
 \lstnewenvironment{python}[1][]{\lstset{style=mypython}}{}
 \newcommand{\pyth}{\lstinline[style=mypython,basicstyle=\ttfamily]}
