@@ -39,6 +39,8 @@ keywordstyle=\color{keywordcolour}\bfseries,
 
 \newcommand*{\literatecolour}{\textcolor{literatecolour}}
 
+\newcommand*{\pythonprompt}{\textcolor{promptcolour}{{>}{>}{>}}}
+
 \lstdefinestyle{mypython}{
 %\lstset{
 %keepspaces=true,
@@ -88,7 +90,7 @@ literate=*%
 {]}{{\literatecolour]}}{1}%
 {<}{{\literatecolour<}}{1}%
 {>}{{\literatecolour>}}{1}%
-{>>>}{{\textcolor{promptcolour}{>>>}}}{1}%
+{>>>}{\pythonprompt}{3}%
 ,%
 %aboveskip=.5ex,
 frame=trbl,
