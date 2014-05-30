@@ -6,7 +6,7 @@ A simple Python highlighting style to be used with LaTeX.
 The package is loaded by the following line:
 
 ```tex
-\usepackage{pythonhighlighting}
+\usepackage{pythonhighlight}
 ```
 
 It is then possible to include a Python snippet directly in the code using:
