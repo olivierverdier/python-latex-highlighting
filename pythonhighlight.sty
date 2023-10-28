@@ -98,7 +98,15 @@ breakindent=.5\textwidth,frame=single,breaklines=true%
 
 \newcommand*{\inputpython}[3]{\lstinputlisting[firstline=#2,lastline=#3,firstnumber=#2,frame=single,breakindent=.5\textwidth,frame=single,breaklines=true,style=mypython]{#1}}
 
-\lstnewenvironment{python}[1][]{\lstset{style=mypython}}{}
+\lstnewenvironment{python}[2][]{%
+	\lst@TestEOLChar{#2}%
+	\lstset{style=mypython}%
+	\lstset{#1}%  % has to be in an  extra \lstset{} command so that labels work correctly
+	\csname\@lst @SetFirstNumber\endcsname%
+}{%
+	\let\if@nobreak\iffalse%
+	\csname\@lst @SaveFirstNumber\endcsname%
+}
 
 \lstdefinestyle{mypythoninline}{
 style=mypython,%
