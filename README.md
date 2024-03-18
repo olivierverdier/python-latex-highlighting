@@ -25,9 +25,12 @@ The special method \pyth{__init__}...
 ```
 
 Last but not least, you can load an external Python file with:
-
 ```tex
-\inputpython{python_file.py}{23}{50}
+\inputpythonfile{python_file.py}[23][50]
 ```
-
-to display the contents of the file ``python_file`` from line 23 to line 50.
+to display the contents of the file ``python_file`` from line 23 to line 50,
+or with
+```tex
+\inputpythonfile{python_file.py}
+```
+to input the whole Python file.

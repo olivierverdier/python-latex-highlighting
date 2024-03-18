@@ -7,6 +7,7 @@
 
 \RequirePackage{listings}
 \RequirePackage{xcolor}
+\RequirePackage{xparse}
 
 \renewcommand*{\lstlistlistingname}{Code Listings}
 \renewcommand*{\lstlistingname}{Code Listing}
@@ -100,6 +101,16 @@ breakindent=.5\textwidth,frame=single,breaklines=true%
 }
 
 \newcommand*{\inputpython}[3]{\lstinputlisting[firstline=#2,lastline=#3,firstnumber=#2,frame=single,breakindent=.5\textwidth,frame=single,breaklines=true,style=pythonhighlight-style]{#1}}
+\NewDocumentCommand\inputpythonfile{moo}{\lstinputlisting[
+  firstline=\IfValueTF{#2}{#2}{0},
+  % firstnumber=\IfValueTF{#2}{#2}{0},
+  lastline=\IfValueTF{#3}{#3}{9999999},
+  frame=single,
+  breakindent=.5\textwidth,
+  frame=single,
+  breaklines=true,
+  style=pythonhighlight-style
+  ]{#1}}
 
 \lstnewenvironment{python}[2][]{%
 	\lst@TestEOLChar{#2}%
