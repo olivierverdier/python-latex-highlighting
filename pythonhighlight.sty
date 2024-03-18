@@ -28,7 +28,7 @@
 
 \newcommand*{\pythonprompt}{\textcolor{promptcolour}{{>}{>}{>}}}
 
-\lstdefinestyle{mypython}{
+\lstdefinestyle{pythonhighlight-style}{
 %\lstset{
 %keepspaces=true,
 language=python,
@@ -99,11 +99,11 @@ breakindent=.5\textwidth,frame=single,breaklines=true%
 %}
 }
 
-\newcommand*{\inputpython}[3]{\lstinputlisting[firstline=#2,lastline=#3,firstnumber=#2,frame=single,breakindent=.5\textwidth,frame=single,breaklines=true,style=mypython]{#1}}
+\newcommand*{\inputpython}[3]{\lstinputlisting[firstline=#2,lastline=#3,firstnumber=#2,frame=single,breakindent=.5\textwidth,frame=single,breaklines=true,style=pythonhighlight-style]{#1}}
 
 \lstnewenvironment{python}[2][]{%
 	\lst@TestEOLChar{#2}%
-	\lstset{style=mypython}%
+	\lstset{style=pythonhighlight-style}%
 	\lstset{#1}%  % has to be in an  extra \lstset{} command so that labels work correctly
 	\csname\@lst @SetFirstNumber\endcsname%
 }{%
@@ -111,8 +111,8 @@ breakindent=.5\textwidth,frame=single,breaklines=true%
 	\csname\@lst @SaveFirstNumber\endcsname%
 }
 
-\lstdefinestyle{mypythoninline}{
-style=mypython,%
+\lstdefinestyle{pythonhighlight-inline-style}{
+  style=pythonhighlight-style,%
 basicstyle=\ttfamily,%
 keywordstyle=\color{keywordcolour},%
 emphstyle={[7]\color{keywordcolour}},%
@@ -144,5 +144,5 @@ literate=*%
 %% emphstyle=\color{blue},%
 }
 
-\newcommand*{\pyth}{\lstinline[style=mypythoninline]}
+\newcommand*{\pyth}{\lstinline[style=pythonhighlight-inline-style]}
 
