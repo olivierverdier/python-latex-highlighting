@@ -21,7 +21,12 @@ def f(x):
 It is also possible to include inline Python code in LaTeX with ``\pyth``:
 
 ```tex
-The special method \pyth{__init__}... 
+The special method \pyth{__init__}...
+```
+
+This also works with other delimiters, for instance:
+```tex
+We use the dictionary \pyth|d = {"a": 1, "b": 2}|.
 ```
 
 Last but not least, you can load an external Python file with:
